@@ -26,13 +26,23 @@ section{max-width:1100px;margin:auto;padding:75px 20px}
 .title h2{font-size:36px;color:#e7b95b}
 .title p{color:#bcae99}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#1b1110;border:1px solid #53371d;border-radius:12px;padding:25px;text-align:center;transition:.2s}
+.card{position:relative;background:#1b1110;border:1px solid #53371d;border-radius:12px;padding:25px;text-align:center;transition:.2s}
 .card:hover{transform:translateY(-4px);border-color:#b47a32;box-shadow:0 8px 25px rgba(0,0,0,.35)}
 .number{width:42px;height:42px;line-height:42px;margin:0 auto 12px;border-radius:50%;background:#b43b22;color:#fff;font-family:Arial,sans-serif;font-weight:bold}
 .icon{font-size:38px;margin-bottom:10px}
 .card h3{color:#f0c76a;margin-bottom:8px;font-size:21px}
 .card p{color:#c9bba7;font-family:Arial,sans-serif;font-size:14px}
-.about{background:#180e0d;border-top:1px solid #39241a;border-bottom:1px solid #39241a}
+.card::after{
+content:"";
+position:absolute;
+top:15px;
+right:15px;
+width:65px;
+height:65px;
+background:url('user-photo.jpg') center/cover no-repeat;
+border-radius:50%;
+border:2px solid #e7b95b;
+}.about{background:#180e0d;border-top:1px solid #39241a;border-bottom:1px solid #39241a}
 .about-box{max-width:800px;margin:auto;text-align:center}
 .about-box p{color:#d4c4ad;margin:12px 0}
 .contact{text-align:center}
